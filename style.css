@@ -26,24 +26,30 @@ body{
     padding: 20px 40px;
 }
 
-.banner_one img{
-   width: 110%;
+.banner_one {
+  background-image: url(image/img-1.jpg);
+    width: 1400px;
+    background-position: center top;
 }
 .form_items{
-    width: 450px;
-    height: 600px;
+    width: 410px;
+    padding: 0 43px;
     display: block;
     background-color: #3c66aa;
     color: #fff;
    top: 50px;
-    right: 110px;
+    right: 70px;
     position: absolute;
-    text-align: center
+    text-align: center;
     
 }
 input{ height: 50px;
-    width: 320px
-    
+    width: 320px;
+    background-color: #3e3e77;
+    border: none;
+    margin: 5px;
+    padding: 15px;
+    color: #b9b3b3;
 }
 .forma .container{
     position: relative;
@@ -52,32 +58,147 @@ input{ height: 50px;
     overflow: hidden;
 }
 .line{
-    text-align: center;
-    margin-bottom: 15px;
-    position: relative;
+    background-image: url(image/bg-legend.png);
+    background-repeat: repeat-x;
+   background-position: left, right;
+
 }
-.line::after{
-    content: "";
-    display: block;
-    border-bottom: 1px double #ff0000;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    z-index: 5;
-}
+
 .line b{
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
+    text-transform: uppercase;
     display: inline-block;
+    font-size: 30px;
+    font-weight: 200;
     background-color: #3c66aa;
-    z-index: 10;
-    position: relative;
-    padding: 40px 30px 20px;
+    padding: 30px 20px 20px;
 }
-h1, h2{
+botton{
+    display: block;
+    width: 280px;
+    height: 50px;
+    background-color: #3e3e77;
+    line-height: 50px;
+    font-size: 24px;
+}
+botton:hover{
+    cursor:pointer;
+}
+
+.fon{
+    background-image: url(image/bg-form-foot.png);
+    background-repeat: repeat-x;
+    height: 100px;
+    margin: 10px -60px;
+    padding: 25px 85px;  
+}
+.fon::after{
+content: "";
+     border: 16px solid transparent;
+    border-right: 16px solid rgb(226, 178, 17);
+    position: absolute;
+    left: -32px;
+    bottom: 62px;
+}
+.fon::before{
+content: "";
+     border: 16px solid transparent;
+    border-left: 16px solid rgb(226, 178, 17);
+    position: absolute;
+    right: -32px;
+    bottom: 62px;
+}
+
+h1, h2, botton {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     text-align: center;
     
+}
+.firstmenu .bloks{
+    display: flex;
+    padding: 40px;
+}
+.firstmenu .container{
+    background-image: url(image/01.png);
+    height: 600px;
+    padding: 30px 50px;
+}
+h2{
+    color: #3c66aa;
+    margin: 10px auto;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.firstmenu p{
+    text-align: center;
+}
+.text{
+    font-size: 24px;
+    text-align: center;
+}
+.bloks h3{
+    color: #3e3e77;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.block_1, .block_2, .block_3, .block_4{
+    width: 220px;
+    height: 200px;
+    background-color: #3e3e77;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+.block_1::after, .block_2::after, .block_3::after, .block_4::after{
+    content: "";
+    border: 15px solid transparent;
+    border-top: 15px solid #3e3e77;
+    position: absolute;
+    bottom: -30px;
+    left: 90px;
+}
+.block_1{
+    background-image: url(image/ico1.png);
+    
+}
+
+
+.block_2 {
+    background-image: url(image/ico2.png);
+}
+.block_3 {
+    background-image: url(image/ico3.png);
+}
+.block_4 {
+    background-image: url(image/ico4.png);
+}
+.pic{
+    display: flex;
+    text-align: center;
+}
+.pic img{
+    width: 100%;
+    margin: 20px 0px;
+}
+.about_us .container{
+    padding: 50px;
+}
+.banner img{
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f4c810;
+    margin: 30px auto;
+
+}
+.banner .text{
+    color: #3b3939;
+    padding: 20px 150px;
+    
+}
+.banner .container{
+    background-image: url(image/testimonials-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 550px;
 }
