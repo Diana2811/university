@@ -61,17 +61,21 @@ background-position: center top;
     background-color: #3c66aa;
     padding: 30px 20px 20px;
 }
-botton{
+button{
     display: block;
     width: 280px;
     height: 50px;
     background-color: #3e3e77;
     line-height: 50px;
     font-size: 24px;
+    color: #ffffff;
     margin: 10px auto;
+    border: none;
+    border-radius: 3px;
 }
-botton:hover{
+button:hover{
     cursor:pointer;
+    color: 
 }
 
 .fon{
@@ -97,7 +101,7 @@ botton:hover{
     right: 0px;
 }
 
-h1, h2, botton {
+h1, h2, button, .curtain {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -124,10 +128,16 @@ h2{
     text-align: center;
 }
 .block img{
-    padding: 45px 55px;
+   position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 25%;
+ 
+}
+ p{
+    text-align: center;
 }
 .block{
-    width: 220px;
     height: 190px;
     background-color: #3e3e77;
     background-position: center;
@@ -139,16 +149,55 @@ h2{
     border: 15px solid transparent;
     border-top: 15px solid #3e3e77;
     position: absolute;
-    bottom: -30px;
-    left: 90px;
+    transform: translateX(-50%);
+    bottom: -15%;
+    left:50%;
+}
+.muving:hover{
+    animation: swing 0.6s ease;
+    animation-iteration-count: 1;
+    color:#3c66aa;
+
+}
+.muving:hover .block {
+    background-color: #f4bd43;
+}
+
+ 
+.muving:hover .block::after{
+     border-top: 15px solid #f4bd43;
+}
+.muving:hover h3{
+    color: #3c66aa;
 }
 .pic p{
-    text-align: center;
     margin-top: 20px;
+}
+.pictures{
+    position:relative; 
 }
 .pic img{
     width: 100%;
 }
+.pic:hover .curtain{
+   opacity: 1;
+}
+
+.curtain{
+   left:0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color:#3e3e77;
+    color: #fff;
+    position: absolute;
+    padding: 80px 0px;
+    font-weight: 500;
+    font-size: 30px;
+     opacity: 0;
+    transition:  opacity 1s ease;
+}
+
 .about_us {
     padding: 60px;
 }
@@ -160,7 +209,7 @@ h2{
 }
 .banner .text{
     color: #3b3939;
-    padding: 20px 150px;
+    padding: 20px 60px;
     
 }
 .banner {
@@ -169,19 +218,25 @@ h2{
     background-repeat: no-repeat;
     background-position: center top;
 }
-.border{
-    display: inline-block;
-}
+
 .banner span{
     text-transform: uppercase;
     color: #3b3939;
-    font-size: 23px
+    font-size: 23px;
 }
-.video, {
+.banner span::before{
+    content: "";
+    display: block;
+    width: 120px;
+    border: 2px solid #3e3e77;
+    margin: 10px auto;
+    background-color: #3e3e77;
+}
+.video {
     padding: 60px;
 }
 .video iframe{
-    width: 400px;
+ width: 80%;
     height: 320px;
     display: block;
     margin-top: 30px;
@@ -190,36 +245,128 @@ h2{
     list-style-image: url(image/bul-list.png);
     margin-top: 30px;
 }
+.invitation{
+    padding: 30px;
+}
 .action{
-    padding: 30px 60px 60px;
+    padding: 30px 60px;
 }
 .registration{
-    width: 250px;
     background-color: #3c66aa; 
-  
     color: #fff;
     line-height: 2.5em;
     font-size: 20px;
+    padding: 15px
    
+}
+.registration button{
+    width: 150px;
+    font-size: 20px;
+}
+.registration{
+    transform: scale(1);
+    transition:  0.5s ease;
+}
+.registration:hover{
+    transform: scale(1.05);
+    background-color: #f4bd43;
+    border-bottom: 0.5px solid #f4bd43;
+}
+.registration:hover h3{
+    color: #3e3e77;
+}
+.registration:hover button{
+    color: #f4bd43;
 }
 .action ul{
     list-style-type: none;
     text-align: center;
+} 
+.action li::before{
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 0.5px solid #a09f9f;
+    justify-content: center;
+    
+}
+.action li first child::before {
+    border-bottom: none;
 }
 .action h3{
     color: #efc40f;
     text-align: center;
     font-size: 35px;
 }
-.action a{
-    color: #ffff;
-    text-decoration: none;
-}
+
+
 .email_form{
-height: 100px;
-    background-color: #f4bd43
+    background-color: #f4bd43;
+    padding: 20px;
+    font-size: 16px;
+    justify-content: space-between;
     
 }
+.email_form .button{
+    width: 30%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 5px;
+    background-color: rgb(157, 122, 6);
+    color: #ffffff;
+    font-family:'Oswald', sans-serif;
+    text-align: center;
+    
+}
+.email_form .email{
+    width:50%;
+    
+}
+.email_form input{
+    background-color: #ffff;
+    height: 40px;
+    margin-right: 0px;
+}
+
 .footer{
     background-color: #000000;
+   padding: 30px;
+    color: #e2e2e2;
+    font-size: 16px;
+    line-height: 1.1em;
+    
+}
+.footer h3{
+    color:#efc40f;
+    font-size: 25px;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+.footer p{
+    text-align: left;
+}
+.footer ul{
+   list-style-type: none;
+    line-height: 1.5em;
+}
+.footer li:before{
+    content: "+";
+}
+.footer a{
+    margin: 0px 3px;
+    font-size: 20px;
+  padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+.social{
+    padding: 20px 0;
+}
+
+@media screen and (max-width:1200px){}
+@media screen and (max-width:768px){}
+@media screen and (max-width:576px){
+    
 }
