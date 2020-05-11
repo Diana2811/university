@@ -265,7 +265,7 @@ h2{
 }
 .registration{
     transform: scale(1);
-    transition:  0.5s ease;
+    transition:  1s ease;
 }
 .registration:hover{
     transform: scale(1.05);
@@ -282,17 +282,14 @@ h2{
     list-style-type: none;
     text-align: center;
 } 
-.action li::before{
-    content: "";
-    display: block;
-    width: 100%;
+.action li{
     border-bottom: 0.5px solid #a09f9f;
-    justify-content: center;
+}
+.registration:hover li{
+    border-bottom: 0.5px solid transparent;
     
 }
-.action li first child::before {
-    border-bottom: none;
-}
+
 .action h3{
     color: #efc40f;
     text-align: center;
@@ -360,13 +357,62 @@ h2{
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
+    
 }
 .social{
-    padding: 20px 0;
+    padding: 20px 0px;
+    
+}
+.icon{
+    position: relative;
+    float: left;
+}
+.icon::before{
+    content: "";
+    display: block;
+    position: absolute; 
+    background-color:  rgba(255,255,255,0.8);
+    padding: 7px 15px;
+    font-size: 16px;
+    bottom: -45px;
+    border-radius: 3px;
+    
+    display: none;
+}
+.icon::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    bottom: -15px;
+    
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    display: none;
+}
+.icon:hover::after{display: block;}
+.icon:hover::before{display: block;}
+.linkedin::before{ content: "linkedin";}
+.youtube::before{content: "youtube"}
+.facebook::before{content: "facebook"}
+.twitter::before{content: "twitter"}
+
+.copy{
+    text-align: center;
+    font-size: 14px;
+    padding-top: 40px;
 }
 
 @media screen and (max-width:1200px){}
 @media screen and (max-width:768px){}
 @media screen and (max-width:576px){
-    
+/*
+    .social{
+        display: flex;
+        justify-content: center;
+    align-items: center;
+*/
+    }
 }
